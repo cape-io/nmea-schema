@@ -1,0 +1,118 @@
+---
+id: GGA
+examples:
+  - $--GGA,hhmmss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx*hh
+  - $GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47
+title: Essential GPS Fix Data
+description: Essential Global Positioning System fix data which provide 3D location and accuracy data.
+fields:
+  - utcTime
+  - latitude
+  - latitudeDirection
+  - longitude
+  - longitudeDirection
+  - gpsQuality
+  - satQty
+  - horizontalDilution
+  - Antenna altitude above/below mean sea level (geoid)
+  - unitMeters
+  - Geoidal separation (Diff. between WGS-84 earth ellipsoid and mean sea level.  -=geoid is below WGS-84 ellipsoid)
+  - unitMeters
+  - Age in seconds since last update from diff. reference station
+  - Diff. reference station ID#
+
+utcTime:
+  title: UTC of Position fix
+  type: number
+  example: 123519 Fix taken at 12:35:19 UTC
+latitude:
+  title: Latitude
+  type: number
+  example: 4807.038 Latitude 48 deg 07.038'
+  minimum: 0
+  maximum: 9000
+latitudeDirection:
+  title: Latitude Direction (N or S)
+  type: string
+  oneOf:
+    -
+      title: North
+      value: N
+    -
+      title: South
+      value: S
+longitude:
+  title: Longitude
+  type: number
+  example: 01131.000  Longitude 11 deg 31.000'
+  minimum: 0
+  maximum: 18000
+longitudeDirection:
+  title: Longitude Direction (E or W)
+  type: string
+  oneOf:
+    -
+      title: East
+      value: E
+    -
+      title: West
+      value: W
+gpsQuality:
+  title: GPS Quality Indicator
+  type: number
+  oneOf:
+    -
+      type: const
+      title: Invalid
+      description: Fix not valid
+      value: 0
+    -
+      type: const
+      title: GPS fix (SPS)
+      value: 1
+    -
+      type: const
+      title: DGPS fix
+      description: Differential GPS fix, OmniSTAR VBS
+      value: 2
+    -
+      type: const
+      title: PPS fix
+      value: 3
+    -
+      type: const
+      title: RTK Int
+      description: Real-Time Kinematic, fixed integers
+      value: 4
+    -
+      type: const
+      title: RTK Float
+      description: Real-Time Kinematic, float integers, OmniSTAR XP/HP or Location RTK
+      value: 5
+    -
+      type: const
+      title: DR Estimate
+      description: Estimated (dead reckoning) (v2.3 feature)
+      value: 6
+    -
+      type: const
+      title: Manual
+      description: Manual input mode
+      value: 7
+    -
+      type: const
+      title: Simulation
+      description: Simulation mode
+satQty:
+  title: Number of satellites being tracked
+  description: Number of satellites in use [not those in view]
+horizontalDilution:
+  title: Horizontal dilution of position
+altitude:
+  title: Altitude, Meters, above mean sea level
+geoIdHeight:
+  title: Height of geoid (mean sea level) above WGS84 ellipsoid
+unitMeters:
+  title: Meters Label
+  tyle: const
+  value: M

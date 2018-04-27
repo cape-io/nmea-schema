@@ -1,0 +1,16 @@
+---
+id: RMC
+example: $GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A
+link: http://www.gpsinformation.org/dale/nmea.htm#RMC
+description: Recommended Minimum sentence C
+fields:
+  - 123519       Fix taken at 12:35:19 UTC
+  - A            Status A=active or V=Void.
+  - Latitude
+  - N or S
+  - Longitude
+  - E or W
+  - Speed over the ground in knots
+  - Track angle in degrees True
+  - Date - 23rd of March 1994
+  - Magnetic Variation

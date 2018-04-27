@@ -1,0 +1,204 @@
+---
+# http://catb.org/gpsd/AIVDM.html
+
+startWithFields: [type, repeat, mmsi]
+
+classA: &classA
+  - year
+  - month
+  - day
+  - hour
+  - minute
+  - second
+  - accuracy
+  - lon
+  - lat
+  - epfd
+  - spare10
+  - raim
+  - radio
+stationTime: &stationTime
+  - year
+  - month
+  - day
+  - hour
+  - minute
+  - second
+  - accuracy
+  - lon
+  - lat
+  - epfd
+  - spare10
+  - raim
+  - radio
+
+msgTypes:
+  -
+    description: "Position Report Class A"
+    fields: *classA
+    id: 1
+  -
+    description: "Position Report Class A (Assigned schedule)"
+    fields: *classA
+    id: 2
+  -
+    description: "Position Report Class A (Response to interrogation)"
+    fields: *classA
+    id: 3
+  -
+    description: "Base Station Report"
+    fields: *stationTime
+    id: 4
+  -
+    description: "Static and Voyage Related Data"
+    fields:
+      - aisVersion
+      - imo
+      - callsign
+      - shipname
+      - shiptype
+      - toBow
+      - toStern
+      - toPort
+      - toStarboard
+      - epfd
+      - month
+      - day
+      - hour
+      - minute
+      - draught
+      - destination
+      - dte
+      - spare1
+    id: 5
+  -
+    description: "Binary Addressed Message"
+    fields: []
+    id: 6
+  -
+    description: "Binary Acknowledge"
+    fields: []
+    id: 7
+  -
+    description: "Binary Broadcast Message"
+    fields: []
+    id: 8
+  -
+    description: "Standard SAR Aircraft Position Report"
+    fields: []
+    id: 9
+  -
+    description: "UTC and Date Inquiry"
+    fields: []
+    id: 10
+  -
+    description: "UTC and Date Response"
+    fields: *stationTime
+    id: 11
+  -
+    description: "Addressed Safety Related Message"
+    fields: []
+    id: 12
+  -
+    description: "Safety Related Acknowledgement"
+    fields: []
+    id: 13
+  -
+    description: "Safety Related Broadcast Message"
+    fields:
+      - spare2
+      -
+        id: text
+        len: 968
+        type: t
+    id: 14
+  -
+    description: Interrogation
+    fields: []
+    id: 15
+  -
+    description: "Assignment Mode Command"
+    fields: []
+    id: 16
+  -
+    description: "DGNSS Binary Broadcast Message"
+    fields: []
+    id: 17
+  -
+    description: "Standard Class B CS Position Report"
+    fields:
+      - reserved
+      - speed
+      - accuracy
+      - lon
+      - lat
+      - course
+      - heading
+      - second
+      - regional2
+      - cs
+      - display
+      - dsc
+      - band
+      - msg22
+      - assigned
+      - raim
+      - radio
+    id: 18
+  -
+    description: "Extended Class B Equipment Position Report"
+    fields:
+      - reserved
+      - speed
+      - accuracy
+      - lon
+      - lat
+      - course
+      - heading
+      - second
+      - regional4
+      - shipname
+      - shiptype
+      - toBow
+      - toStern
+      - toPort
+      - toStarboard
+      - epfd
+      - raim
+      - dte
+      - assigned
+      - spare4
+    id: 19
+  -
+    description: "Data Link Management"
+    fields: []
+    id: 20
+  -
+    description: "Aid-to-Navigation Report"
+    fields: []
+    id: 21
+  -
+    description: "Channel Management"
+    fields: []
+    id: 22
+  -
+    description: "Group Assignment Command"
+    fields: []
+    id: 23
+  -
+    description: "Static Data Report"
+    fields: []
+    id: 24
+  -
+    description: "Single Slot Binary Message,"
+    fields: []
+    id: 25
+  -
+    description: "Multiple Slot Binary Message With Communications State"
+    fields: []
+    id: 26
+  -
+    description: "Position Report For Long-Range Applications"
+    fields: []
+    id: 27
+# // addFields, preprocessFields

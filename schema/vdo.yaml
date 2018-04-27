@@ -1,0 +1,5 @@
+VDO: {
+    id: 'VDO',
+    description: 'Own Ship AIS',
+    fields: VDM.fields,
+  }

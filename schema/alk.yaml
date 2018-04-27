@@ -1,0 +1,12 @@
+---
+id: ALK
+example: $STALK,xx,yy,nn*CS
+description: Raymarine Seatalk1 datagram sentence
+fields:
+  - 00-9C - Datagram type
+  - hex - First datagram content
+  - hex - Last datagram content
+
+# AIALR
+# AIACK
+# DUAIQ

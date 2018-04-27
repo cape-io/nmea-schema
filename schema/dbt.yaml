@@ -1,0 +1,20 @@
+  DBT: {
+    name: 'depth',
+    description: 'Depth below transducer',
+    signalK: 'environment.depth.belowTransducer',
+    fields: [ feet, unitFeet
+      { id: 'unitMeters', type: 'const', value: 'M' },
+      { id: 'fathoms', type: 'float' },
+      { id: 'unitFathoms', type: 'const', value: 'F' },
+    ],
+  },
+feet:
+  id: feet
+  type: number
+  multipleOf: 0.01
+unitFeet:
+  type: const
+  value: f
+meters:
+  type: number
+  multipleOf: 0.1
