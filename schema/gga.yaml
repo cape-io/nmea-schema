@@ -5,8 +5,9 @@ examples:
   - $GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47
 title: Essential GPS Fix Data
 description: Essential Global Positioning System fix data which provide 3D location and accuracy data.
+type: array
 fields:
-  - utcTime
+  - timestamp
   - latitude
   - latitudeDirection
   - longitude
@@ -14,26 +15,36 @@ fields:
   - gpsQuality
   - satQty
   - horizontalDilution
-  - Antenna altitude above/below mean sea level (geoid)
+  - altitude
   - unitMeters
-  - Geoidal separation (Diff. between WGS-84 earth ellipsoid and mean sea level.  -=geoid is below WGS-84 ellipsoid)
+  - geoSep  Geoidal separation (Diff. between WGS-84 earth ellipsoid and mean sea level.  -=geoid is below WGS-84 ellipsoid)
   - unitMeters
-  - Age in seconds since last update from diff. reference station
-  - Diff. reference station ID#
+  - diffAge Age in seconds since last update from diff. reference station
+  - stationId Diff. reference station ID#
+
+
+('Units of altitude (meters)', 'altitude_units'),
+('Geoidal Separation', 'geo_sep'),
+('Units of Geoidal Separation (meters)', 'geo_sep_units'),
+('Age of Differential GPS Data (secs)', 'age_gps_data'),
+('Differential Reference Station ID', 'ref_station_id'),
 
 utcTime:
-  title: UTC of Position fix
+  title: Timestamp UTC of Position fix
+  name: utcTime
   type: number
   example: 123519 Fix taken at 12:35:19 UTC
 latitude:
   title: Latitude
   type: number
+  encode: degrees
   example: 4807.038 Latitude 48 deg 07.038'
   minimum: 0
   maximum: 9000
 latitudeDirection:
   title: Latitude Direction (N or S)
   type: string
+  name: latPole
   oneOf:
     -
       title: North
@@ -43,6 +54,8 @@ latitudeDirection:
       value: S
 longitude:
   title: Longitude
+  name: long
+  encode: degrees
   type: number
   example: 01131.000  Longitude 11 deg 31.000'
   minimum: 0
@@ -50,6 +63,7 @@ longitude:
 longitudeDirection:
   title: Longitude Direction (E or W)
   type: string
+  name: longPole
   oneOf:
     -
       title: East
@@ -63,56 +77,76 @@ gpsQuality:
   oneOf:
     -
       type: const
+      name: none
       title: Invalid
       description: Fix not valid
       value: 0
     -
       type: const
+      name: 'fix'
       title: GPS fix (SPS)
       value: 1
     -
       type: const
       title: DGPS fix
+      name: 'delta'
       description: Differential GPS fix, OmniSTAR VBS
       value: 2
     -
       type: const
+      name: pps
       title: PPS fix
       value: 3
     -
       type: const
+      name: rtk
       title: RTK Int
       description: Real-Time Kinematic, fixed integers
       value: 4
     -
       type: const
+      name: frtk'
       title: RTK Float
       description: Real-Time Kinematic, float integers, OmniSTAR XP/HP or Location RTK
       value: 5
     -
       type: const
+      name: estimated
       title: DR Estimate
       description: Estimated (dead reckoning) (v2.3 feature)
       value: 6
     -
       type: const
+      name: manual
       title: Manual
       description: Manual input mode
       value: 7
     -
       type: const
+      name: simulation
       title: Simulation
       description: Simulation mode
 satQty:
   title: Number of satellites being tracked
+  name: numSats
   description: Number of satellites in use [not those in view]
+
 horizontalDilution:
-  title: Horizontal dilution of position
+  title: Horizontal Dilution of Precision
+  name: horizontalDil
+
 altitude:
-  title: Altitude, Meters, above mean sea level
+  title: Antenna Altitude
+  description: Antenna altitude above/below mean sea level (mean) (geoid) (float)
+
 geoIdHeight:
   title: Height of geoid (mean sea level) above WGS84 ellipsoid
 unitMeters:
   title: Meters Label
   tyle: const
   value: M
+altUnit
+geoidalSep
+geoidalSepUnit
+differentialAge
+differentialRefStn
