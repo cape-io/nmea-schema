@@ -4,19 +4,20 @@
 startWithFields: [type, repeat, mmsi]
 
 classA: &classA
-  - year
-  - month
-  - day
-  - hour
-  - minute
-  - second
+  - status
+  - turn
+  - speed
   - accuracy
   - lon
   - lat
-  - epfd
-  - spare10
+  - course
+  - heading
+  - second
+  - maneuver
+  - spare3
   - raim
   - radio
+
 stationTime: &stationTime
   - year
   - month
@@ -85,6 +86,7 @@ msgTypes:
     id: 8
   -
     description: "Standard SAR Aircraft Position Report"
+    type: aircraft
     fields: []
     id: 9
   -
@@ -175,6 +177,7 @@ msgTypes:
     id: 20
   -
     description: "Aid-to-Navigation Report"
+    type: atons
     fields: []
     id: 21
   -

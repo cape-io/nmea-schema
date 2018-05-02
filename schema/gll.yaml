@@ -1,5 +1,0 @@
-  GLL: {
-    description: 'Geographic position - latitude and longitude',
-    fields: [
-      { id: 'latitude', type: 'lat' },
-      { id: 'hemisphere' },

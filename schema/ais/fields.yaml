@@ -1,0 +1,222 @@
+---
+# http://catb.org/gpsd/AIVDM.html
+# Field types. Please put `id` property 1st and `len` 2nd.
+
+accuracy:
+  id: accuracy
+  identifier: posAccuracy
+  len: 1
+  title: "Position Accuracy"
+  type: boolean
+aisVersion:
+  id: aisVersion
+  len: 2
+  maximum: 3
+  title: "AIS Version"
+  type: number
+assigned:
+  id: assigned
+  len: 1
+  title: "Message Type"
+  type: b
+band:
+  id: band
+  len: 1
+  title: "Message Type"
+  type: b
+callsign:
+  id: callsign
+  len: 42
+  title: "Call Sign"
+  type: t
+course:
+  id: course
+  len: 12
+  title: "Course Over Ground (COG)"
+  signalK: courseOverGroundTrue
+  type: tenth
+cs:
+  id: cs
+  len: 1
+  title: "CS Unit"
+  type: b
+day:
+  id: day
+  len: 5
+  title: "Day (UTC)"
+  type: u
+destination:
+  id: destination
+  len: 120
+  title: Destination
+  type: t
+display:
+  id: display
+  len: 1
+  title: "Display flag"
+  type: b
+draught:
+  id: draught
+  len: 8
+  name: draft
+  title: Draught
+dsc:
+  id: dsc
+  len: 1
+  title: "Message Type"
+  type: b
+dte:
+  id: dte
+  len: 1
+  title: "Data Terminal Environment - Is Ready"
+  type: b
+epfd:
+  id: epfd
+  len: 4
+  title: "Type of EPFD"
+heading:
+  id: heading
+  len: 9
+  title: "True Heading (HDG)"
+  signalK: headingTrue
+  type: u
+hour:
+  id: hour
+  len: 5
+  title: "Hour (UTC)"
+imo:
+  id: imo
+  len: 30
+  title: "IMO Number"
+lat:
+  id: lat
+  identifier: latitude
+  len: 27
+  title: Latitude
+  type: lat
+lon:
+  id: lon
+  identifier: longitude
+  len: 28
+  title: Longitude
+  type: lon
+maneuver:
+  id: maneuver
+  len: 2
+  title: "Maneuver Indicator"
+minute:
+  id: minute
+  len: 6
+  title: "Minute (UTC)"
+mmsi:
+  id: mmsi
+  identifier: userId
+  len: 30
+  title: MMSI
+  type: u
+month:
+  id: month
+  len: 4
+  name: "Month (UTC)"
+  type: u
+msg22:
+  description: "Message Type"
+  id: msg22
+  len: 1
+  type: b
+radio:
+  description: "Radio status"
+  id: radio
+  len: 20
+  type: u
+raim:
+  description: "RAIM flag"
+  id: raim
+  len: 1
+  type: b
+regional2:
+  id: regional
+  len: 2
+  name: "Regional reserved"
+  type: u
+regional4:
+  id: regional
+  len: 4
+  name: "Regional reserved"
+  type: u
+repeat:
+  id: repeat
+  len: 2
+  name: "Repeat Indicator"
+  type: u
+reserved:
+  id: reserved
+  len: 8
+  name: "Regional Reserved"
+  type: x
+second:
+  id: second
+  len: 6
+  title: "UTC Seconds Time Stamp"
+  type: u
+shipname:
+  description: "Vessel Name"
+  id: shipname
+  len: 120
+  type: t
+shiptype:
+  description: "Ship Type"
+  id: shiptype
+  len: 8
+spare1:
+  id: spare
+  len: 1
+spare10:
+  id: spare
+  len: 10
+spare2:
+  id: spare
+  len: 2
+spare3:
+  id: spare
+  len: 3
+spare4:
+  id: spare
+  len: 4
+speed:
+  description: "0.1-knot resolution from 0 to 102 knots."
+  id: speed
+  identifier: sog
+  len: 10
+  title: "Speed Over Ground"
+  signalK: speedOverGround
+  type: tenth
+status:
+  id: status
+  len: 4
+  title: "Navigation Status"
+toBow:
+  id: toBow
+  len: 9
+toPort:
+  id: toPort
+  len: 6
+toStarboard:
+  id: toStarboard
+  len: 6
+toStern:
+  id: toStern
+  len: 9
+turn:
+  id: turn
+  len: 8
+type:
+  description: "Message Type"
+  id: type
+  len: 6
+  type: u
+year:
+  id: year
+  len: 14
+  title: "Year (UTC)"
+  type: u

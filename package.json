@@ -1,0 +1,8 @@
+{
+  "name": "nmea0183-schema",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:cape-io/nmea0183-schema.git",
+  "author": "Kai Curry <kai@cape.io>",
+  "license": "MIT"
+}

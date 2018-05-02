@@ -1,36 +1,5 @@
----
-id: GGA
-examples:
-  - $--GGA,hhmmss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx*hh
-  - $GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47
-title: Essential GPS Fix Data
-description: Essential Global Positioning System fix data which provide 3D location and accuracy data.
-type: array
-fields:
-  - timestamp
-  - latitude
-  - latitudeDirection
-  - longitude
-  - longitudeDirection
-  - gpsQuality
-  - satQty
-  - horizontalDilution
-  - altitude
-  - unitMeters
-  - geoSep  Geoidal separation (Diff. between WGS-84 earth ellipsoid and mean sea level.  -=geoid is below WGS-84 ellipsoid)
-  - unitMeters
-  - diffAge Age in seconds since last update from diff. reference station
-  - stationId Diff. reference station ID#
-
-
-('Units of altitude (meters)', 'altitude_units'),
-('Geoidal Separation', 'geo_sep'),
-('Units of Geoidal Separation (meters)', 'geo_sep_units'),
-('Age of Differential GPS Data (secs)', 'age_gps_data'),
-('Differential Reference Station ID', 'ref_station_id'),
-
 utcTime:
-  title: Timestamp UTC of Position fix
+  title: Day Timestamp UTC of Position fix
   name: utcTime
   type: number
   example: 123519 Fix taken at 12:35:19 UTC
@@ -126,27 +95,3 @@ gpsQuality:
       name: simulation
       title: Simulation
       description: Simulation mode
-satQty:
-  title: Number of satellites being tracked
-  name: numSats
-  description: Number of satellites in use [not those in view]
-
-horizontalDilution:
-  title: Horizontal Dilution of Precision
-  name: horizontalDil
-
-altitude:
-  title: Antenna Altitude
-  description: Antenna altitude above/below mean sea level (mean) (geoid) (float)
-
-geoIdHeight:
-  title: Height of geoid (mean sea level) above WGS84 ellipsoid
-unitMeters:
-  title: Meters Label
-  tyle: const
-  value: M
-altUnit
-geoidalSep
-geoidalSepUnit
-differentialAge
-differentialRefStn

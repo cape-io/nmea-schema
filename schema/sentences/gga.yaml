@@ -1,0 +1,61 @@
+---
+id: GGA
+examples:
+  - $--GGA,hhmmss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx*hh
+  - $GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47
+title: Essential GPS Fix Data
+description: Essential Global Positioning System fix data which provide 3D location and accuracy data.
+type: array
+fields:
+  - timestamp
+  - latitude
+  - latitudeDirection
+  - longitude
+  - longitudeDirection
+  - gpsQuality
+  - satQty
+  - horizontalDilution
+  - altitude
+  - unitMeters
+  - geoSep
+  - geoSepUnits
+  - differentialAge
+  - stationId
+
+satQty:
+  title: Number of satellites being tracked
+  name: numSats
+  description: Number of satellites in use [not those in view]
+
+horizontalDilution:
+  title: Horizontal Dilution of Precision
+  name: horizontalDil
+
+altitude:
+  title: Antenna Altitude
+  description: Antenna altitude above/below mean sea level (mean) (geoid) (float)
+altitudeUnit:
+  title: Unit of measurement for altitude. Expected to be M for Meters.
+  name: altUnit
+geoIdHeight:
+  title: Height of geoid (mean sea level) above WGS84 ellipsoid
+unitMeters:
+  title: Meters Label
+  description: Units of previous field. Expected to be meters.
+  tyle: const
+  value: M
+geoidalSep:
+  name: geoSep
+  title: Geoidal Separation
+  description: Geoidal Separation (Diff. between WGS-84 earth ellipsoid and mean sea level.  -=geoid is below WGS-84 ellipsoid)
+geoidalSepUnit:
+  description: Units of Geoidal Separation (meters)
+  name: geoSepUnits
+differentialAge:
+  title: Age of Differential GPS Data (secs)
+  description: Age in seconds since last update from diff. reference station
+  name: diffAge
+differentialRefStn:
+  name: stationId
+  title: Diff. reference station ID#
+  description: Differential Reference Station ID
