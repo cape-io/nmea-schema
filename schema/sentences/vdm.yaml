@@ -1,12 +1,23 @@
-{
-  name: 'VDM',
-  description: 'Reports from other ships',
-  fields: [
-    { id: 'fragmentCount', type: 'int' },
-    { id: 'fragmentNumber', type: 'int' },
-    { id: 'messageId', type: 'int' },
-    { id: 'radioChannel', type: 'string' },
-    { id: 'payload', type: 'ais' },
-    { id: 'fillBits', type: 'int' },
-  ],
-}
+---
+id: VDM
+title: AIS Reports from other ships
+description: Automatic Identification System (AIS) payload from other ships
+fields:
+  -
+    id: fragmentCount
+    type: int
+  -
+    id: fragmentNumber
+    type: int
+  -
+    id: messageId
+    type: int
+  -
+    id: radioChannel
+    type: string
+  -
+    id: payload
+    type: ais
+  -
+    id: fillBits
+    type: int

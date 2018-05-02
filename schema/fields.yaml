@@ -1,3 +1,14 @@
+feet:
+  id: feet
+  multipleOf: 0.01
+  type: number
+feetUnit:
+  type: string
+  const: f
+metersUnit:
+  type: string
+  const: M
+
 utcTime:
   title: Day Timestamp UTC of Position fix
   name: utcTime
@@ -17,10 +28,10 @@ latitudeDirection:
   oneOf:
     -
       title: North
-      value: N
+      const: N
     -
       title: South
-      value: S
+      const: S
 longitude:
   title: Longitude
   name: long
@@ -45,53 +56,45 @@ gpsQuality:
   type: number
   oneOf:
     -
-      type: const
       name: none
       title: Invalid
       description: Fix not valid
-      value: 0
+      const: 0
     -
-      type: const
       name: 'fix'
       title: GPS fix (SPS)
-      value: 1
+      const: 1
     -
-      type: const
       title: DGPS fix
       name: 'delta'
       description: Differential GPS fix, OmniSTAR VBS
-      value: 2
+      const: 2
     -
-      type: const
       name: pps
       title: PPS fix
-      value: 3
+      const: 3
     -
-      type: const
       name: rtk
       title: RTK Int
       description: Real-Time Kinematic, fixed integers
-      value: 4
+      const: 4
     -
-      type: const
       name: frtk'
       title: RTK Float
       description: Real-Time Kinematic, float integers, OmniSTAR XP/HP or Location RTK
-      value: 5
+      const: 5
     -
-      type: const
       name: estimated
       title: DR Estimate
       description: Estimated (dead reckoning) (v2.3 feature)
-      value: 6
+      const: 6
     -
-      type: const
       name: manual
       title: Manual
       description: Manual input mode
-      value: 7
+      const: 7
     -
-      type: const
       name: simulation
       title: Simulation
       description: Simulation mode
+      const: 8

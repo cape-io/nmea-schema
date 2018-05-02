@@ -23,14 +23,7 @@
 -
   id: ALA
   title: "Set Detail Alarm Condition"
--
-  id: ALK
-  title: Raymarine Seatalk1 datagram sentence
-  example: $STALK,xx,yy,nn*CS
-  fields:
-    - 00-9C - Datagram type
-    - hex - First datagram content
-    - hex - Last datagram content
+
 -
   id: ALM
   title: "GPS Almanac Data"
@@ -178,9 +171,7 @@
 -
   id: DBS
   title: "Depth Below Surface"
--
-  id: DBT
-  title: "Depth below transducer"
+
 -
   id: DCN
   title: "Decca Position"
@@ -220,9 +211,7 @@
 -
   id: GBS
   title: "GPS Satellite Fault Detection"
--
-  id: GGA
-  title: "Global Positioning System Fix Data"
+
 -
   id: GLC
   title: "Geographic Position, Loran-C"
@@ -234,9 +223,7 @@
     - Timestamp, timestamp', timestamp
     - Status, status' # contains the 'A' or 'V' flag
     - FAA mode indicator,faa_mode
--
-  id: GLL
-  title: "Geographic Position - Latitude/Longitude"
+
 -
   id: GNS
   title: "Fix data"
@@ -405,21 +392,6 @@
     - Velocity Towards Destination, dest_velocity # Knots
     - Arrival Alarm, arrival_alarm
 -
-  id: RMC
-  title: "Recommended Minimum Navigation Information"
-  fields:
-    - Timestamp,timestamp, timestamp
-    - Status, status' # contains the 'A' or 'V' flag
-    - Latitude,lat
-    - Latitude Direction, lat_dir
-    - Longitude, lon
-    - Longitude Direction, lon_dir
-    - Speed Over Ground, spd_over_grnd, float
-    - True Course, true_course, float
-    - Datestamp, datestamp, datestamp
-    - Magnetic Variation, mag_variation
-    - Magnetic Variation Direction, mag_var_dir
--
   id: ROT
   title: "Rate Of Turn"
 -
@@ -495,32 +467,6 @@
 -
   id: VDR
   title: "Set and Drift"
--
-  id: VDM
-  title: AIS Reports from other ships
-  description: Automatic Identification System (AIS) payload
-  fields:
-    -
-      id: fragmentCount
-      type: int
-    -
-      id: fragmentNumber
-      type: int
-    -
-      id: messageId
-      type: int
-    -
-      id: radioChannel
-      type: string
-    -
-      id: payload
-      type: ais
-    -
-      id: fillBits
-      type: int
--
-  id: VDO
-  title: "Automatic Identification System (AIS) payload"
 -
   id: VHW
   title: "Water speed and heading"
