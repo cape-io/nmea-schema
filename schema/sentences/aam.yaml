@@ -1,0 +1,8 @@
+id: AAM
+title: Waypoint Arrival Alarm
+fields:
+  - 'Arrival Circle Entered, arrival_circ_entered'
+  - 'Perpendicular Passed, perp_passed'
+  - 'Circle Radius, circle_rad'
+  - 'Nautical Miles, circle_rad_unit'
+  - 'Waypoint ID, waypoint_id'

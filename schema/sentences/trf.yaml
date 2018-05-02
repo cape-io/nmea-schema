@@ -1,0 +1,14 @@
+id: TRF
+title: TRANSIT Fix Data
+fields:
+  - 'Timestamp (UTCtimestamp, timestamp'
+  - 'Date (DD/MM/YY, date'
+  - 'Latitude, lat'
+  - 'Latitude Direction, lat_dir'
+  - 'Longitude, lon'
+  - 'Longitude Direction, lon_dir'
+  - 'Elevation Angle, ele_angle'
+  - 'Number of Iterations, num_iterations'
+  - 'Number of Doppler Intervals, num_doppler_intervals'
+  - 'Update Distance, update_dist'
+  - 'Satellite ID, sat_id'

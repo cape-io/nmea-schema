@@ -1,0 +1,7 @@
+id: TXT
+title: Text Transmission
+fields:
+  - msgQty Number of Messages num_msg
+  - msgIndex Message Number msg_num
+  - Type of Message msg_type
+  - Text text

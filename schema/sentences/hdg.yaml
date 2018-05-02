@@ -1,0 +1,8 @@
+id: HDG
+title: Heading - Deviation & Variation
+fields:
+  - 'Heading,heading, Decimal'
+  - 'Deviation,deviation, Decimal'
+  - 'Deviation Direction,dev_dir'
+  - 'Variation,variation, Decimal'
+  - 'Variation Direction,var_dir'

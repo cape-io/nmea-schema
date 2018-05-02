@@ -1,0 +1,10 @@
+id: GLC
+title: 'Geographic Position, Loran-C'
+fields:
+  - 'Latitude, lat'''
+  - 'Latitude Direction, lat_dir'''
+  - 'Longitude, lon'''
+  - 'Longitude Direction, lon_dir'''
+  - 'Timestamp, timestamp'', timestamp'
+  - 'Status, status'''
+  - 'FAA mode indicator,faa_mode'

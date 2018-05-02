@@ -1,0 +1,17 @@
+id: APB
+title: Autopilot Sentence B
+fields:
+  - 'General Status, status_gen'
+  - 'Cycle lock Status, status_cycle_lock'
+  - 'Cross Track Error Magnitude, cross_track_err_mag'
+  - Direction to Steer (L or Rdir_steer
+  - Cross Track Units (Nautical Miles or KMcross_track_unit
+  - 'Arrival Circle Entered, arr_circle_entered'
+  - 'Perpendicular passed at waypoint, perp_passed'
+  - 'Bearing origin to destination, bearing_to_dest'
+  - 'Bearing type, bearing_type'
+  - 'Destination waypoint ID, dest_waypoint_id'
+  - 'Bearing, present position to dest,bearing_pres_dest'
+  - 'Bearing to destination, type,bearing_pres_dest_type'
+  - 'Heading to steer to destination, heading_to_dest'
+  - 'Heading to steer to destination type, heading_to_dest_type'

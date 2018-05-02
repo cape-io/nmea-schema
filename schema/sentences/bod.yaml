@@ -1,0 +1,9 @@
+id: BOD
+title: Bearing - Waypoint to Waypoint
+fields:
+  - 'Bearing True, bearing_t'', Decimal'
+  - 'Bearing True Type, bearing_t_type'''
+  - 'Bearing Magnetic, bearing_mag'', Decimal'
+  - 'Bearing Magnetic Type, bearing_mag_type'''
+  - 'Destination, dest'''
+  - 'Start, start'''

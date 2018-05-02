@@ -1,0 +1,7 @@
+id: RTE
+title: Routes
+fields:
+  - 'Number of sentences in sequence, num_in_seq'
+  - 'Sentence Number, sen_num'
+  - 'Start Type, start_type'
+  - 'Name or Number of Active Route, active_route_id'

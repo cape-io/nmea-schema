@@ -1,0 +1,18 @@
+id: ALM
+title: GPS Almanac Data
+fields:
+  - 'Total number of messages,total_num_msgs'
+  - 'Message number,msg_num'
+  - 'Satellite PRN number,sat_prn_num'
+  - 'GPS week number,gps_week_num'
+  - 'SV Health, bits 17-24 of each almanac page,sv_health'
+  - 'Eccentricity,eccentricity'
+  - 'Almanac Reference Time,alamanac_ref_time'
+  - 'Inclination Angle,inc_angle'
+  - 'Rate of right ascension,rate_right_asc'
+  - 'Root of semi-major axis,root_semi_major_axis'
+  - 'Argument of perigee,arg_perigee'
+  - 'Longitude of ascension node,lat_asc_node'
+  - 'Mean anomaly,mean_anom'
+  - 'F0 Clock parameter,f0_clock_param'
+  - 'F1 Clock parameter,f1_clock_param'

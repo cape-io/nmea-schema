@@ -1,0 +1,15 @@
+id: BWR
+title: Bearing and Distance to Waypoint - Rhumb Line
+fields:
+  - 'Timestamp, timestamp'', timestamp'
+  - 'Latitude of next Waypoint, lat_next'''
+  - 'Latitude of next Waypoint Direction, lat_next_direction'''
+  - 'Longitude of next Waypoint, lon_next'''
+  - 'Longitude of next Waypoint Direction, lon_next_direction'''
+  - 'True track to waypoint, true_track'''
+  - 'True Track Symbol, true_track_sym'''
+  - 'Magnetic track to waypoint, mag_track'''
+  - 'Magnetic Symbol, mag_sym'''
+  - 'Range to waypoint, range_next'''
+  - 'Unit of range, range_unit'''
+  - 'Waypoint Name, waypoint_name'''

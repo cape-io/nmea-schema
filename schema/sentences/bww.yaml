@@ -1,0 +1,9 @@
+id: BWW
+title: Bearing - Waypoint to Waypoint
+fields:
+  - 'Bearing degrees True,bearing_deg_true'
+  - 'Bearing degrees True Symbol,bearing_deg_true_sym'
+  - 'Bearing degrees Magnitude,bearing_deg_mag'
+  - 'Bearing degrees Magnitude Symbol,bearing_deg_mag_sym'
+  - 'Destination Waypoint ID,waypoint_id_dest'
+  - 'Origin Waypoint ID,waypoint_id_orig'

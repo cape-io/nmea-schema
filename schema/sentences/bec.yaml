@@ -1,0 +1,16 @@
+id: BEC
+title: Bearing & Distance to Waypoint
+fields:
+  - 'Timestamp,timestamp, timestamp'
+  - 'Waypoint Latitude,waypoint_lat'
+  - 'Waypoint Latitude direction,waypoint_lat_dir'
+  - 'Waypoint Longitude,waypoint_lon'
+  - 'Waypoint Longitude direction,waypoint_lon_dir'
+  - 'Bearing, true,bearing_true'
+  - 'Bearing True symbol,bearing_true_sym'
+  - 'Bearing Magnetic,bearing_mag'
+  - 'Bearing Magnetic symbol,bearing_mag_sym'
+  - 'Nautical Miles,nautical_miles'
+  - 'Nautical Miles symbol,nautical_miles_sym'
+  - 'Waypoint ID,waypoint_id'
+  - 'FAA mode indicator,faa_mode'

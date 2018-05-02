@@ -18,7 +18,8 @@ const propSorter = _.overArgs((propA, propB) => {
 
 function saveYaml(sentence) {
   const data = safeDump(sentence, { sortKeys: propSorter })
-  fs.writeFileSync(`schema/sentences/${sentence.id}.yaml`, data, 'utf8')
+  const filename = sentence.id.toLowerCase()
+  fs.writeFileSync(`schema/sentences/${filename}.yaml`, data, 'utf8')
 }
 const doc = safeLoad(fs.readFileSync('schema/sentences.yaml', 'utf8'))
 doc.forEach(saveYaml)

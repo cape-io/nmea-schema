@@ -1,0 +1,5 @@
+id: HDT
+title: Heading - True
+fields:
+  - 'Heading,heading, Decimal'
+  - 'True,hdg_true'
